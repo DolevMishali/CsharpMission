@@ -1,0 +1,19 @@
+{
+    "persons": [
+        {
+            "name": "yishai",
+            "age": 40,
+            "occupation": "design"
+        },
+        {
+            "name": "oshri",
+            "age": 32,
+            "occupation": "hr"
+        },
+        {
+            "person": "tamir",
+            "age": 27,
+            "occupation": "qa"
+        }
+    ]
+}
