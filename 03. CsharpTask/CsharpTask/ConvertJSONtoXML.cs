@@ -7,6 +7,12 @@ namespace CSharpTask
     {
         static void Main()
         {
+            /*                                              There are 2 solutions:
+                                      ----------- The first solutions is the intuitive way. -----------
+                                      ----------- The second way using newton external package. -----------                 */
+
+            //The condition seperate the solutions, but the first lines(14-19) and the last lines(57-60) are relevant for both of them.
+
             string currentDir = Directory.GetCurrentDirectory();
             string inputFilePath = Path.Combine(currentDir, @"..\..\..\..\exam.json");
             string outputFilePath = Path.Combine(currentDir, @"..\..\..\..\exam.xml");
@@ -37,13 +43,10 @@ namespace CSharpTask
                     // Add the person XElement to the root XElement
                     root.Add(personElement);
                 }
-
                 xmlOutput = root.ToString();
             }
             else
             {
-                /* ----------- The easiest way using newton external package ----------- */
-
                 // Convert JSON to XML
                 JObject jsonObject = JObject.Parse(jsonString);
                 XNode convertedXml = Newtonsoft.Json.JsonConvert.DeserializeXNode(jsonObject.ToString(), "Root");
